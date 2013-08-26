@@ -1,0 +1,30 @@
+<div class="row noon-mix-header offset-nav">
+    <div class="col-xs-4"></div>
+    
+    <div class="col-xs-8 nav-header">
+        <span class="muted">NOON // Mixes</span>
+    </div>
+
+</div>
+
+<div class="row">
+    <ul class="nav nav-list mix-ul-list">
+        <li ng-repeat="mix in mixes" class="mix-li-item">
+            <a ng-click="fetchMix($index)">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img style="padding-left: 10px;" class="fade-img" ng-src="{{mix.smallPic}}" />
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <h5>{{mix.name}}</h5>
+                        </div>
+                        <div>
+                            <h6 class="row muted">{{mix.plays}} plays</h6>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
