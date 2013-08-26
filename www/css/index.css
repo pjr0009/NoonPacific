@@ -92,7 +92,7 @@ li.divider {
 .progress{
   background-color: transparent;
   margin: auto;
-  height: 8px;
+  height: 5px;
 }
 .progress-bar {
   background-color: #f8f8f8;
