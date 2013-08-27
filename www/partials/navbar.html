@@ -20,14 +20,31 @@
     </div>
     
     <div class="col-xs-8 track-info">
-      <div ng-repeat="song in songs | oneAtATime: current_index" ng-animate="'fade'" class="track-info-container">
-        <div class="info">
-          <div class="row-fluid"><span class="song-name">{{song.name}}</span></div>
-          <div class="row-fluid"><small class="song-artist">{{song.artist}}</small></div>
-          <div class="row"></div>
+     
+        
+        
+        <div ng-repeat="song in songs | oneAtATime: current_index" ng-animate="'fade'" class="track-info-container">
+          <div class="info">
+            <div ng-switch="route">
+             
+              <div ng-switch-default>     
+                <div class="row-fluid"><span class="song-name">{{song.name}}</span></div>
+                <div class="row-fluid"><small class="song-artist">{{song.artist}}</small></div>
+                <div class="row"></div>
+              </div>
+            
+              <div ng-switch-when="mixes">
+                <div class="song-name">
+                  NOON // MIXES
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+
+      
+  </div>
    
     <div class="col-xs-2 mixes" ng-switch="route" ng-animate="'fade'">
       
