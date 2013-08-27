@@ -48,6 +48,8 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         };
       };
       $scope.fetchMix = function(index) {
+        $scope.playing = false;
+        $('#progress-bar').css("width", 0);
         $scope.mix = $scope.mixes[index];
         return eightTrackService.getMix($scope.mix.id, $scope.p_tkn).then(function() {
           return $scope.slidePage('/', 'slide', true);
@@ -55,11 +57,9 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
       };
       $scope.$on('setLoaded', function(scope, set) {
         $scope.songs.length = $scope.mix.tracks;
-        $scope.playing = true;
         audio.src = set.set.track.url;
         $scope.songs[0] = new Song(set.set.track.name, set.set.track.performer, set.set.track.year, set.set.track.buy_link, set.set.track.play_duration);
         $('#progress-bar').css("width", 0);
-        return audio.play();
       });
       $scope.$on('skipSuccess', function(scope, set) {
         if (!set.at_end) {
