@@ -42,6 +42,26 @@
 
 /* app css stylesheet */
 
+body {
+  color:#000;
+}
+
+a {
+  color:#000;
+}
+
+a:hover, a:focus {
+  color:#000;
+}
+
+.navbar-default .navbar-brand {
+  color:#000;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color:#333;
+}
+
 .np-logo {
   width: 140px;
   margin-top: 20px;
@@ -59,12 +79,21 @@ li.divider {
 .track-info-container {
   overflow: hidden; }
 
-.navbar {
-  opacity: 0.9; }
+.navbar-default {
+  background-color:#fff;
+}
+
+.mix-li-item h5 {
+  margin-bottom:0px;
+}
+
+.mix-li-item h6 {
+  color:#888;
+}
 
 .info {
   text-align: center;
-  padding-top: 8px; }
+  padding-top: 10px; }
 
 .song-name,
 .song-artist {
@@ -72,8 +101,8 @@ li.divider {
   padding: 0px; }
 
 .song-name {
-  font-size: 1.3em;
-  font-weight: 200; }
+  font-size: 1em;
+  font-weight: 500; }
 
 .mix-info {
   text-align: left;
