@@ -20,7 +20,7 @@
     
     <div class="col-xs-8 track-info">
      
-      <div ng-switch="playing"> 
+      <div ng-switch="play_logic()"> 
         <div ng-switch-when="true"> 
           <div ng-repeat="song in songs | oneAtATime: current_index" ng-animate="'fade'" class="track-info-container">
             <div class="info">

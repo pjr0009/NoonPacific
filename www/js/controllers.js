@@ -104,6 +104,14 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           return audio.play();
         }
       };
+      $scope.play_logic = function(){
+        if($scope.playing == true || ($scope.playing == false && $scope.route == "mixes")){
+          return true;
+        } else {
+          return false;
+        }
+      };
+
       $scope.skip = function() {
         if($scope.can_skip == true){
           $('.track-info-container').hide();
