@@ -76,7 +76,15 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
 
       $(audio).on('timeupdate', function() {
           var time = ((this.currentTime / this.duration) * 100).toString() + "%"
-          $('#progress-bar').css("width", time);
+          console.log(this.currentTime / this.duration)
+          if((this.current / this.duration) == 1){
+            eightTrackService.next($scope.mix.id, $scope.p_tkn);            
+            $('#progress-bar').css("width", 0);
+          }
+          else{
+            $('#progress-bar').css("width", time);
+          }
+
       });
 
       $scope.toggle_menu = function() {

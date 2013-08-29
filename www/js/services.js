@@ -27,6 +27,11 @@ NoonPacific.service('eightTrackService', ["$rootScope", "$http", function ($root
           return $http.get("http://8tracks.com/sets/" + token + "/skip.json?mix_id=" + mix + "&" + api).success(function(data) {
             return $rootScope.$broadcast('skipSuccess', data);
           });
+        },
+        next: function(mix, token) {
+          return $http.get("http://8tracks.com/sets/" + token + "/next.json?mix_id=" + mix + "&" + api).success(function(data) {
+            return $rootScope.$broadcast('skipSuccess', data);
+          });
         }
       };
 }]);
