@@ -83,6 +83,11 @@ a:hover, a:focus {
   padding-top:10px;
 }
 
+.song-name.title {
+  padding-top:10px;
+  font-weight:normal;
+}
+
 li.divider {
   border-bottom: 1px solid #dddddd; }
 
@@ -118,7 +123,7 @@ li.divider {
 
 .song-name {
   font-size: 1em;
-  font-weight: 500; }
+  font-weight: bold; }
 
 .mix-info {
   text-align: left;
@@ -127,9 +132,7 @@ li.divider {
 .offset-nav {
   margin-top: 67px;
 }
-.noon-mix-header {
-  background: #333333;
-}
+
 .bar-row {
   background-color: transparent;
 }
@@ -173,7 +176,10 @@ li.divider {
     color: white; }
 
 .mix-ul-list {
-  padding-bottom: 10%; }
+  padding-bottom: 10%; 
+  margin-top:50px;
+
+}
 
 .action-col {
   padding-top: 10px;
