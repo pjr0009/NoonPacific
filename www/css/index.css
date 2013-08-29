@@ -63,14 +63,22 @@ a:hover, a:focus {
 }
 
 .icon-reorder.navbar-brand {
-  margin-top:5px;
   margin-right:5px;
+}
+
+.icon-chevron-left.navbar-brand {
+  margin-top:6px;
 }
 
 .np-logo {
   width: 140px;
   margin-top: 20px;
   margin-bottom: 20px; }
+
+.logo img {
+  width:175px;
+  padding-top:10px;
+}
 
 li.divider {
   border-bottom: 1px solid #dddddd; }
@@ -98,7 +106,7 @@ li.divider {
 
 .info {
   text-align: center;
-  padding-top: 10px; }
+  padding-top: 5px; }
 
 .song-name,
 .song-artist {
