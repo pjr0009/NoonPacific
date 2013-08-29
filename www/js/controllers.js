@@ -17,6 +17,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
       $scope.songs = [];
       $scope.playing = false;
       $scope.next_track = false;
+      $scope.can_skip = true;
       $scope.route = "home";
       $scope.show_menu = false;
       $scope.current_index = 0;
@@ -52,6 +53,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         $('#progress-bar').css("width", 0);
         $scope.mix = $scope.mixes[index];
         return eightTrackService.getMix($scope.mix.id, $scope.p_tkn).then(function() {
+          $scope.can_skip = true;
           return $scope.slidePage('/', 'slide', true);
         });
       };
@@ -65,6 +67,8 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         if (!set.at_end) {
           $scope.playing = true;
           audio.src = set.set.track.url;
+          $scope.can_skip = set.set.skip_allowed;
+          console.log($scope.can_skip);
           $scope.songs[$scope.current_index + 1] = new Song(set.set.track.name, set.set.track.performer, set.set.track.year, set.set.track.buy_link, set.set.track.play_duration);
           $('#progress-bar').css("width", 0);
           audio.play();
@@ -87,6 +91,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
 
       });
 
+
       $scope.toggle_menu = function() {
         return $scope.show_menu = !$scope.show_menu;
       };
@@ -100,10 +105,18 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         }
       };
       $scope.skip = function() {
-        $('.track-info-container').hide();
-        audio.pause();
-        return eightTrackService.skip($scope.mix.id, $scope.p_tkn);
+        if($scope.can_skip == true){
+          $('.track-info-container').hide();
+          audio.pause();
+          return eightTrackService.skip($scope.mix.id, $scope.p_tkn);
+        }
       };
+
+      $scope.skip_icon = function(){
+        if($scope.can_skip == false){
+          return "muted";
+        }
+      }
 
       $scope.slidePage = function (path, type, isReverse) {
         if(path == "/mixes"){

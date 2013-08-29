@@ -11,6 +11,6 @@
       <div ng-switch-when="true" class="action icon-pause icon-2x"></div>
       <div ng-switch-when="false" class="action icon-play icon-2x"></div>
     </div>
-    <div ng-click="skip()" class="col-xs-4 action-col"><i class="icon-forward icon-2x"></i></div>
+    <div ng-class="skip_icon()" ng-click="skip()" class="col-xs-4 action-col"><i ng-class="skip_icon()" class="icon-forward icon-2x"></i></div>
   </div>
 </nav>
