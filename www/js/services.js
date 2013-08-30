@@ -16,7 +16,7 @@ NoonPacific.service('eightTrackService', ["$rootScope", "$http", function ($root
           return $http.get("http://8tracks.com/sets/new.json?" + api);
         },
         getMixes: function() {
-          return $http.get("http://8tracks.com/mixes.json?tag=noon_pacific&" + api);
+          return $http.get("http://8tracks.com/mix_sets/dj:2254184.json?include=mixes&" + api);
         },
         getMix: function(latest, token) {
           return $http.get(" http://8tracks.com/sets/" + token + "/play.json?mix_id=" + latest + "&" + api).success(function(data) {

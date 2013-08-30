@@ -41,6 +41,10 @@
 .muted {
   color: #666;
 }
+.nav.nav-list li a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 
 /* app css stylesheet */
@@ -98,7 +102,7 @@ a:hover, a:focus {
 }
 
 li.divider {
-  border-bottom: 1px solid #dddddd; }
+  border-bottom: 1px solid #000; }
 
 .menu-ul-list {
   text-align: left; }
@@ -194,9 +198,6 @@ li.divider {
   padding-top: 10px;
   text-align: center; }
 
-.mix-li-item {
-  border-bottom: 1px solid #eee;
-}
 .track-info {
   text-align: center; }
 
