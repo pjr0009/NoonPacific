@@ -54,7 +54,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         $scope.mix = $scope.mixes[index];
         return eightTrackService.getMix($scope.mix.id, $scope.p_tkn).then(function() {
           $scope.can_skip = true;
-          return $scope.slidePage('/', 'slide', true);
+          return $scope.slidePage('/', 'slide', true, $scope.toggle);
         });
       };
       $scope.$on('setLoaded', function(scope, set) {
@@ -126,7 +126,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         }
       }
 
-      $scope.slidePage = function (path, type, isReverse) {
+      $scope.slidePage = function (path, type, isReverse, callback) {
         if(path == "/mixes"){
           $scope.route = "mixes";
         } else if (path == "/menu"){
@@ -135,6 +135,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           $scope.route = "home";
         }
         navSvc.slidePage(path, type, isReverse);
+        callback();
       };
 
       $scope.back = function () {
