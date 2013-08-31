@@ -82,11 +82,12 @@ a:hover, a:focus {
 .np-logo {
   width: 140px;
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 .logo img {
   width:175px;
-  padding-top:10px;
+  padding-top: .8em;
 }
 
 .song-name.title {
@@ -110,8 +111,12 @@ li.divider {
   background-color:#fff;
 }
 
+.mix-ul-list {
+  margin: 0 0 .5em;
+}
+
 .mix-ul-list li {
-  margin: .5em 0;
+  margin: .5em 0 0;
 }
 .mix-ul-list h5 {
   margin-bottom:0px;
@@ -165,6 +170,9 @@ li.divider {
 .actions {
   padding-bottom: 10px;
   background-color: #f8f8f8;
+}
+.action-col:hover {
+  color: #333;
 }
 
 .progress-danger
