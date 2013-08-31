@@ -62,14 +62,6 @@ a:hover, a:focus {
   color:#000;
 }
 
-#bg {
-  background-repeat:no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .navbar-default .navbar-brand {
   color:#000;
 }
