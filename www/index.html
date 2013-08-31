@@ -5,9 +5,6 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
 
-        <!-- Use the .min version of bootstrap files in production -->
-        <!-- Use the following if you want to use responsive design -->
-
         <link rel="stylesheet" type="text/css" href="css/mobile-nav.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
@@ -18,11 +15,8 @@
     </head>
     
     <body ng-controller="HomeCtrl" style="background:url('{{mix.bigPic}}') no-repeat center center fixed; background-size: cover;" id="bg">
-        <!-- The following tag is in place of ng-view to use the angular mobile view navigation framework
-            https://github.com/ajoslin/angular-mobile-nav
-        -->
+        
         <ng-include src="'partials/navbar.html'"></ng-include>
-
 
         <ng-include src="'partials/player.html'"></ng-include>
         <div ng-class="route">

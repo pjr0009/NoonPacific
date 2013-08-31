@@ -52,6 +52,7 @@
 body {
   color:#000;
   background-color:#fff;
+  font-size: 300%;
 }
 
 a {
@@ -109,12 +110,17 @@ li.divider {
   background-color:#fff;
 }
 
-.mix-li-item h5 {
+.mix-ul-list li {
+  margin: .5em 0;
+}
+.mix-ul-list h5 {
   margin-bottom:0px;
 }
-
-.mix-li-item h6 {
+.mix-ul-list h6 {
   color:#888;
+}
+.mix-ul-list img {
+  padding-left: .5em;
 }
 
 .info {
