@@ -505,3 +505,11 @@ h4 {
 .slide-leave-start {
   top:200px;
 }
+
+.mixes {
+  margin: 25px 0;
+  padding: 10px;
+}
+.mixes .media > .pull-left {
+  margin-right: 20px;
+}

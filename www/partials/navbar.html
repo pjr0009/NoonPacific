@@ -1,14 +1,6 @@
 <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
   <div class="row">
     <div class="col-xs-2" ng-switch="route" ng-animate="'fade'">
-      
-<!--       <div ng-switch-when="home" >
-        <div class="border-wrap" ng-click="slidePage('/menu', 'slide', true)">
-            <a class="icon-info navbar-brand">
-            </a>
-        </div>
-      </div> -->
-      
       <div ng-switch-when="mixes">
         <div class="arrow-padding-left" ng-click="back()">
           <div class="icon-chevron-left  navbar-brand">
@@ -51,7 +43,7 @@
    
  
    
-    <div class="col-xs-2 mixes" ng-switch="route" ng-animate="'fade'">
+    <div class="col-xs-2" ng-switch="route" ng-animate="'fade'">
       
       <div ng-switch-when="home">
         <div ng-click="slidePage('/mixes')" class="pull-right">

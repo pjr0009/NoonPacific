@@ -1,21 +1,11 @@
-<div class="row">
-    <ul class="nav nav-list mix-ul-list">
-        <li ng-repeat="mix in mixes" class="mix-li-item">
-            <a ng-click="fetchMix($index)">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img style="padding-left: 10px;" class="fade-img" ng-src="{{mix.smallPic}}" />
-                    </div>
-                    <div class="col-xs-10">
-                        <div class="row">
-                            <h5>{{mix.name}}</h5>
-                        </div>
-                        <div>
-                            <h6 class="row muted">{{mix.plays}} plays</h6>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
+<ul class="media-list mixes">
+    <li ng-repeat="mix in mixes" class="media" ng-click="fetchMix($index)">
+        <div class="pull-left">
+            <img class="media-object fade-img" ng-src="{{mix.smallPic}}">
+        </div>
+        <div class="media-body">
+            <h5>{{mix.name}}</h5>
+            <h6 class="row muted">{{mix.plays}} plays</h6>
+        </div>
+    </li>
+</ul>
