@@ -507,8 +507,9 @@ h4 {
 }
 
 .mixes {
-  margin: 25px 0;
-  padding: 10px;
+  padding: 35px 10px 30px;
+  background-color: #fff;
+  opacity: 0.9;
 }
 .mixes .media > .pull-left {
   margin-right: 20px;
