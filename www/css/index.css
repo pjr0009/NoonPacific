@@ -515,6 +515,10 @@ h4 {
   padding: 10px;
   margin: 0;
 }
+.mix-list .media .media-object {
+  min-width: 56px;
+  background: #999;
+}
 .mix-list .media > .pull-left {
   margin-right: 20px;
 }
