@@ -21,6 +21,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
       $scope.route = "home";
       $scope.show_menu = false;
       $scope.current_index = 0;
+
       $scope.initEightTrack = function() {
         if($scope.mixes.length == 0) {
           return eightTrackService.createNewPlayToken().success(function(data) {
