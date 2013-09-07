@@ -506,11 +506,18 @@ h4 {
   top:200px;
 }
 
-.mixes {
-  padding: 35px 10px 30px;
+.mix-list {
+  padding: 60px 10px 50px;
   background-color: #fff;
   opacity: 0.9;
 }
-.mixes .media > .pull-left {
+.mix-list .media {
+  padding: 10px;
+  margin: 0;
+}
+.mix-list .media > .pull-left {
   margin-right: 20px;
+}
+.mix-list .media.active {
+  background: #cbd5dd;
 }

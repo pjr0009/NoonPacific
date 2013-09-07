@@ -58,6 +58,13 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           return $scope.slidePage('/', 'slide', true, $scope.toggle);
         });
       };
+      $scope.activeMix = function(index) {
+        if($scope.mix === $scope.mixes[index]) {
+          return "active"
+        } else {
+          return ""
+        }
+      }
       $scope.$on('setLoaded', function(scope, set) {
         $scope.songs.length = $scope.mix.tracks;
         audio.src = set.set.track.url;
