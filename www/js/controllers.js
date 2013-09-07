@@ -65,12 +65,14 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           return ""
         }
       }
+
       $scope.$on('setLoaded', function(scope, set) {
         $scope.songs.length = $scope.mix.tracks;
         audio.src = set.set.track.url;
         $scope.songs[0] = new Song(set.set.track.name, set.set.track.performer, set.set.track.year, set.set.track.buy_link, set.set.track.play_duration);
         $('#progress-bar').css("width", 0);
       });
+
       $scope.$on('skipSuccess', function(scope, set) {
         console.log('skip success');
         $scope.playing = true;
@@ -86,18 +88,21 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
       });
 
       $(audio).on('timeupdate', function() {
-          var time = ((this.currentTime / this.duration) * 100).toString() + "%"
-          console.log(this.currentTime / this.duration)
-          if((this.currentTime / this.duration) == 1){
-            $('#progress-bar').css("width", 0);
-            console.log("song over");
-            audio.pause();
-            return eightTrackService.next($scope.mix.id, $scope.p_tkn);
-          }
-          else{
-            $('#progress-bar').css("width", time);
-          }
+        
+        var time = ((this.currentTime / this.duration) * 100).toString() + "%";
+        
+        if((this.currentTime / this.duration) == 1){
+          $('#progress-bar').css("width", 0);
+          console.log("song over");
+          audio.pause();
+          return $scope.$apply(function(){ eightTrackService.next($scope.mix.id, $scope.p_tkn) });
+        }
+        else{
+          $('#progress-bar').css("width", time);
+        }
       });
+
+
 
 
       $scope.toggle_menu = function() {
