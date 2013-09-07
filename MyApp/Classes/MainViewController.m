@@ -26,6 +26,7 @@
 //
 
 #import "MainViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation MainViewController
 
@@ -37,6 +38,8 @@
         // _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];
         // Uncomment to override the CDVCommandQueue used
         // _commandQueue = [[MainCommandQueue alloc] initWithViewController:self];
+        NSError *setCategoryError = nil; 
+        [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: &setCategoryError];
     }
     return self;
 }

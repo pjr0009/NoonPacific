@@ -72,7 +72,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         $('#progress-bar').css("width", 0);
       });
       $scope.$on('skipSuccess', function(scope, set) {
-        if (!set.at_end) {
+        
           $scope.playing = true;
           audio.src = set.set.track.url;
           $scope.can_skip = set.set.skip_allowed;
@@ -83,7 +83,6 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           if ($scope.current_index < $scope.songs.length - 1) {
             return $scope.current_index += 1;
           }
-        }
       });
 
       $(audio).on('timeupdate', function() {
@@ -96,7 +95,6 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           else{
             $('#progress-bar').css("width", time);
           }
-
       });
 
 
