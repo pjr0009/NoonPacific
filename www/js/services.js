@@ -29,6 +29,7 @@ NoonPacific.service('eightTrackService', ["$rootScope", "$http", function ($root
           });
         },
         next: function(mix, token) {
+          console.log('next song');
           return $http.get("http://8tracks.com/sets/" + token + "/next.json?mix_id=" + mix + "&" + api).success(function(data) {
             return $rootScope.$broadcast('skipSuccess', data);
           });

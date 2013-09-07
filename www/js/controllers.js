@@ -72,25 +72,27 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         $('#progress-bar').css("width", 0);
       });
       $scope.$on('skipSuccess', function(scope, set) {
-        
-          $scope.playing = true;
-          audio.src = set.set.track.url;
-          $scope.can_skip = set.set.skip_allowed;
-          console.log($scope.can_skip);
-          $scope.songs[$scope.current_index + 1] = new Song(set.set.track.name, set.set.track.performer, set.set.track.year, set.set.track.buy_link, set.set.track.play_duration);
-          $('#progress-bar').css("width", 0);
-          audio.play();
-          if ($scope.current_index < $scope.songs.length - 1) {
-            return $scope.current_index += 1;
-          }
+        console.log('skip success');
+        $scope.playing = true;
+        audio.src = set.set.track.url;
+        $scope.can_skip = set.set.skip_allowed;
+        console.log($scope.can_skip);
+        $scope.songs[$scope.current_index + 1] = new Song(set.set.track.name, set.set.track.performer, set.set.track.year, set.set.track.buy_link, set.set.track.play_duration);
+        $('#progress-bar').css("width", 0);
+        audio.play();
+        if ($scope.current_index < $scope.songs.length - 1) {
+          return $scope.current_index += 1;
+        }
       });
 
       $(audio).on('timeupdate', function() {
           var time = ((this.currentTime / this.duration) * 100).toString() + "%"
           console.log(this.currentTime / this.duration)
-          if((this.current / this.duration) == 1){
-            eightTrackService.next($scope.mix.id, $scope.p_tkn);            
+          if((this.currentTime / this.duration) == 1){
             $('#progress-bar').css("width", 0);
+            console.log("song over");
+            audio.pause();
+            return eightTrackService.next($scope.mix.id, $scope.p_tkn);
           }
           else{
             $('#progress-bar').css("width", time);
@@ -141,7 +143,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
           $scope.route = "home";
         }
         navSvc.slidePage(path, type, isReverse);
-        callback();
+        if(callback !== undefined) {callback()};
       };
 
       $scope.back = function () {
@@ -149,12 +151,9 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
         navSvc.back();
       };
 
-
       $scope.$watch('current_index', function(newVal) {
         return $scope.song = $scope.songs[$scope.current_index];
       });
-
-
 
       $scope.$watch('route', function(newVal){
         console.log(newVal)
