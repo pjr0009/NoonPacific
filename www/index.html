@@ -22,14 +22,6 @@
         <div ng-class="route">
             <mobile-view />
         </div>
-
-
-        <!-- Comment out the following 2 lines to test on the browser-->
-        <!--
-        <script type="text/javascript" src="cordova-2.7.0.js"></script>
-        
-        -->
-        <script type="text/javascript" src="js/index.js"></script>
         
         <!-- In production use min versions -->
         <script src="lib/jx.min.js"></script>
@@ -44,8 +36,9 @@
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
 
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        <!-- Comment out the following 3 lines to test on the browser-->
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">app.initialize();</script>
     </body>
 </html>
