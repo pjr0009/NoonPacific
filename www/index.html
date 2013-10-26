@@ -14,27 +14,29 @@
 
     </head>
     
-    <body ng-controller="HomeCtrl" style="background:url('{{mix.bigPic}}') no-repeat center center fixed; background-size: cover;" id="bg">
+    <body ng-controller="HomeCtrl" id="bg" ng-init="initEightTrack()">
 
         <ng-include src="'partials/navbar.html'"></ng-include>
         <ng-include src="'partials/player.html'"></ng-include>
-        
+
         <div ng-class="route">
             <mobile-view />
         </div>
 
 
         <!-- Comment out the following 2 lines to test on the browser-->
+        <!--
         <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        
+        -->
         <script type="text/javascript" src="js/index.js"></script>
         
         <!-- In production use min versions -->
         <script src="lib/jx.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
         <script src="lib/angular.js"></script>
         <script src="lib/angular-mobile.js"></script>
         <script src="lib/mobile-nav.js"></script>
-        <script src="lib/jquery.min.js"></script>
-
 
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
