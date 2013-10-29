@@ -32,6 +32,8 @@
     position: absolute;
 }
 
+
+
 .note {
     position: absolute;
     bottom: 45px;
@@ -516,7 +518,8 @@ h4 {
   margin: 0;
 }
 .mix-list .media .media-object {
-  min-width: 56px;
+  width: 56px;
+  height: 56px;
   background: #999;
 }
 .mix-list .media > .pull-left {

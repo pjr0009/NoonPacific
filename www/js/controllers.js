@@ -165,7 +165,7 @@ function HomeCtrl ($scope, $http, eightTrackService, audio, $document, navSvc, $
   });
 
   $scope.$watch('route', function(newVal){
-    console.log(newVal)
+    
     if(newVal != "home"){
       $("#progress-bar").css('background-color', '#666');
     } else {
