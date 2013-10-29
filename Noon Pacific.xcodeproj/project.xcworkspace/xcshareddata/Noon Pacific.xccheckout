@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0CD60117-75FE-4FC3-A270-064980164AE9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Noon Pacific</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9F46B5F5-03A0-47BA-83B4-8D907D519B5A</key>
+		<string>ssh://github.com/pjr0009/NoonPacific.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Noon Pacific.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9F46B5F5-03A0-47BA-83B4-8D907D519B5A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/pjr0009/NoonPacific.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9F46B5F5-03A0-47BA-83B4-8D907D519B5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9F46B5F5-03A0-47BA-83B4-8D907D519B5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NoonPacific</string>
+		</dict>
+	</array>
+</dict>
+</plist>
