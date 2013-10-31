@@ -304,7 +304,9 @@ li.divider {
     background-size: cover;
 }
 
-
+.navbar-fixed-top {
+  padding-top: 1em !important;
+}
 
 p {
   color: #c6c8c8;
