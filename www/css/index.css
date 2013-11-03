@@ -63,7 +63,9 @@ a {
 a:hover, a:focus {
   color:#000;
 }
-
+.navbar-fixed-top {
+  padding-top: 4%;
+}
 .navbar-default .navbar-brand {
   color:#000;
 }
